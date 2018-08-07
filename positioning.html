@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Positions</title>
+        <style>
+            h3{
+                border:inset 5px green;
+                background-color:aquamarine;
+                font-family:courier;
+                width:200px;
+            }
+            .absolute {
+                background-color:aquamarine;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                width: 200px;
+                height: 100px;
+                border: 5px inset green;
+            }
+
+            .relative {
+                background-color:aquamarine;
+                position: relative;
+                width: 400px;
+                height: 200px;
+                border: 5px inset green;
+            } 
+            img{
+                position:absolute;
+                left:0px;
+                top:0px;
+                z-index:-1
+
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div>
+            <h3>This is static</h3> <!--no special positioning-->
+        </div>
+        <div style = "position:relative;left:100px">
+            <h3>This is relative</h3> <!--Relative to its normal position-->
+        </div>
+
+        <div style = "position:fixed;top:20px;right:0px">
+                <h3>This is fixed </h3> <!--fixed at a specified position even while scanning-->
+            </div>
+            <iframe src = "text.html" height = "700" width = "500"> </iframe> 
+            
+            
+            <div class = "relative"> 
+                <div class="absolute">This div element has position: absolute;</div>
+            </div>
+            <br />
+            <br />
+        
+    </body>
+
+
+</html>
