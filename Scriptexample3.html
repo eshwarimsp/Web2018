@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Script Example 3</title>
+        <style>
+        .spl{
+                color: green ;
+        }
+        </style>
+        <script type = "text/javascript">
+           //window.alert("Welcome to JS programming");
+            function bFunc() {
+                if(confirm("Are you sure?")){
+                document.getElementById("first").innerHTML = "This is changed content" ;
+                document.getElementsByTagName("H1")[0].setAttribute("class","spl");
+                document.getElementsByClassName("spl2")[0].style.color = "red" ;
+            }
+            else{
+                alert("Yo have chosen to make no changes");
+            }
+            }
+        </script>
+
+    </head>
+    <body>
+        <h1 id = "first"> This is initial content</h1>
+        <h2 class = "spl2">This is initial content</h2>
+        <p class = "spl2">This has been added for explanation</p>
+        <button onclick = "bFunc()">Click me</button>
+
+    </body>
+</html>
