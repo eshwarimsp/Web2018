@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Food Order</title>
+        <script>
+          function displayBill(){
+                
+                var theform = document.forms["form1"];
+                var includeitem = theform.elements["includeitem"];
+                var itemprice =0;
+                var bill = 0;
+                var bill1 = 0;
+                var bill2 = 0;
+                var bill3 = 0;
+                var bill4 = 0;
+                var foodprices = new Array();
+                foodprices["Tea"] = 10;
+                foodprices["Coffee"] = 20;
+                foodprices["Non-soda Cold Beverages"] = 20;
+                foodprices["soda Cold Beverages"] = 20;
+                var teaquant = theform.elements["quantity1"].value;
+                var coffeequant = theform.elements["quantity2"].value;
+                var nonsodaquant = theform.elements["quantity3"].value;
+                var sodaquant = theform.elements["quantity4"].value;
+                alert(teaquant);
+                alert(coffeequant);
+                alert(sodaquant);
+                alert(nonsodaquant);
+               
+              
+          }
+        
+        </script>
+
+    </head>
+    <body>
+        <h1>Food order</h1>
+        <h3>The Menu</h3>
+        <form id = "form1">
+        <input type = "checkbox" name = "includeitem"  value = "Tea"> Tea - Rs.10 
+        Quantity : <select id = "quantity1">
+            <option value ="1">1</option>
+            <option value ="2">2</option>
+            <option value ="3">3</option>
+            <option value ="4">4</option>
+            <option value ="5">5</option>
+
+        </select> <br />
+        <input type = "checkbox" name = "includeitem"  value = "Coffee">Coffee - Rs.20 
+        Quantity : <select id = "quantity2">
+                <option value ="1">1</option>
+                <option value ="2">2</option>
+                <option value ="3">3</option>
+                <option value ="4">4</option>
+                <option value ="5">5</option>
+    
+            </select> <br />
+        <input type = "checkbox" name = "includeitem"  value = "Non-soda Cold Beverages">Non-soda Cold Beverages - Rs.20
+        Quantity : <select id = "quantity3">
+                <option value ="1">1</option>
+                <option value ="2">2</option>
+                <option value ="3">3</option>
+                <option value ="4">4</option>
+                <option value ="5">5</option>
+    
+            </select> <br />
+        <input type = "checkbox" name = "includeitem"  value = "soda Cold Beverages">soda Cold Beverages - Rs.20
+        Quantity : <select id = "quantity4">
+                <option value ="1">1</option>
+                <option value ="2">2</option>
+                <option value ="3">3</option>
+                <option value ="4">4</option>
+                <option value ="5">5</option>
+    
+            </select> <br />
+        
+        <button onclick = "displayBill()"> Confirm Order
+        </form>
+    </body>
+</html>

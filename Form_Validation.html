@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> Form Validation</title>
+        <script>
+         var help = ["Enter your full name here with initials",
+                        "Enter your 10 digit mobile number in 91-9876543210",
+                        "Enter your Email ID",
+                        " "];
+            function getHelp(a){
+                document.getElementById("instruction").innerHTML = help[a];
+            }
+            function validate(){
+                //alert("validation");
+                var name = document.forms["form2"]["uname"];
+                var mob = document.forms["form2"]["mobile"];
+                var mail = document.forms["form2"]["email"];
+                if (name.value == ""){
+                            window.alert("Please enter your name");
+                }  
+                if (mail.value.indexOf('@',0)<0) {
+                    window.alert("Please enter valid email id");
+                }
+            }
+        
+        </script>
+
+    </head>
+    <body>
+    
+     <form id="form2" onsubmit = "validate()">
+       User Name : <input type = "text", name = "uname" required minlength = "5" onfocus = "getHelp(0)" onblur = "getHelp(3)"> </br> <br />
+       Mobile No. : <input type = "text", name = "mobile" required pattern = "[9][1][-][0-9]{10}" onfocus = "getHelp(1)" onblur = "getHelp(3)"> </br> <br />
+       Email : <input type = "text", name = "email" onfocus = "getHelp(2)" onblur = "getHelp(3)"> </br> <br />
+       <input type = "submit" name = "submit"> <br />  <br />
+     </form>
+     <div id = "instruction"></div>
+
+    </body>
+</html>

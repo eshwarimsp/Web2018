@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Food Order</title>
+        <script>
+          function displayBill(){
+                
+                var theform = document.forms["form1"];
+                var includeitem = theform.elements["includeitem"];
+                var bill =0;
+                var foodprices = new Array();
+                foodprices["Tea"] = 10;
+                foodprices["Coffee"] = 20;
+                foodprices["Non-soda Cold Beverages"] = 20;
+                foodprices["soda Cold Beverages"] = 20;
+                for(var i=0;i<includeitem.length;i++){
+                        if(includeitem[i].checked)
+                        bill = bill+foodprices[includeitem[i].value];
+                }
+               alert("The total amount to be paid is :" + bill);
+              
+          }
+          
+        
+        
+        
+        </script>
+
+    </head>
+    <body>
+        <h1>Food order</h1>
+        <h3>The Menu</h3>
+        <form id = "form1">
+        <input type = "checkbox" name = "includeitem"  value = "Tea"> Tea - Rs.10 <br />
+        <input type = "checkbox" name = "includeitem"  value = "Coffee">Coffee - Rs.20 <br />
+        <input type = "checkbox" name = "includeitem"  value = "Non-soda Cold Beverages">Non-soda Cold Beverages - Rs.20 <br />
+        <input type = "checkbox" name = "includeitem"  value = "soda Cold Beverages">soda Cold Beverages - Rs.20
+         <br />
+        
+        <button onclick = "displayBill()"> Confirm Order </button>
+        </form> <br /> <br />
+        
+        
+    </body>
+</html>

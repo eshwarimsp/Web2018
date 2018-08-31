@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Form Processing</title>
+        <script>
+            var help = ["Enter your full name here with initials",
+                        "Enter your 7 digit reg number",
+                        "Enter your batch in year in the format 2018-19",
+                        "Give your suggestions here",
+                        " "];
+            function getHelp(a){
+                document.getElementById("desc").innerHTML = help[a];
+            }
+            function displayName(){
+                var theform = document.forms["form1"];
+                var studentname = form1.elements["studentname"];
+                var nam = studentname.value;
+                alert("Welcome "+ nam + "!!");
+                
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <form id = "form1">
+            Name : <input id = "studentname" type = "text" name = "studentname" onfocus = "getHelp(0)" onblur = "getHelp(4)">  <br /> <br />
+            Reg No : <input type = "text" name = "studregno" onfocus = "getHelp(1)" onblur = "getHelp(4)"> <br /> <br />
+            Batch : <input type = "text" name = "batch" onfocus = "getHelp(2)" onblur = "getHelp(4)"> <br /> <br />
+            Semester : 
+            <select name = "semester">
+                <option value = "1"> First</option>
+                <option value = "2"> Second</option>
+                <option value = "3"> Third</option>
+                <option value = "4"> Fourth</option>
+                <option value = "5"> Fifth</option>
+                <option value = "6"> Sixth</option>
+                <option value = "7"> Seventh</option>
+                <option value = "8"> Eighth</option>
+            </select> <br /> <br />
+            <textarea name = "suggestions" onfocus = "getHelp(3)" onblur = "getHelp(4)"> Suggestions</textarea> <br /> <br />
+            <input type = "Submit" value = "submit" onClick = "displayName()" onblur = "getHelp(4)" >
+
+        </form>
+        <div id = "desc"></div>
+        
+
+    </body>
+</html>
